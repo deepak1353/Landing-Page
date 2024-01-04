@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LandingPage</title>
+</head>
+
+<body>
+  <div class="app">
+    <!-- header section -->
+    <div class="header">
+      <img alt="image" class="header__left" src="./images/logo/headerLogo.png" />
+      <span class="header__right">
+        <p class="header__right-banner">
+          <span class="header__right-banner--yellow">Sarala </span>
+          <span class="header__right-banner--blue">Birla </span>
+          <span class="header__right-banner--green">University</span>
+        </p>
+        <a href="tel:+18008906077">
+          <span href="tel:+18008906077" class="header__right-contact">Toll free:18008906077</span>
+        </a>
+      </span>
+    </div>
+
+    <!-- Hero Image -->
+    <div class="hero">
+      <img alt="image" class="hero-scroll" src="./images/hero/admissionScroll.png" />
+      <div class="hero-main">
+        <h1 class="hero-main-heading"> GLOBAL EDUCATION</h1>
+        <p> Closer to home</p>
+      </div>
+      <!-- form  for desktop view-->
+      <div class="formContainer">
+        <!-- toggle buttons -->
+        <div class='login_signUp_toggle'>
+          <button class="signUp_toggle" onclick="signupShow()">Sign Up</button>
+          <button class="login_toggle" onclick="loginShow()">Login</button>
+        </div>
+
+        <div id="login-form">
+          <form class="login ">
+            <label for="email">Email</label>
+            <input required type="email" id="email" name="email" placeholder="Enter registered email" />
+
+            <label class="password-label" for="password">Password</label>
+            <input required class="password-input" minlength="6" type="password" id="password" name="password"
+              placeholder="Enter 6 digit code" />
+
+            <button class="login-submit" type="submit" value="Login">Login</button>
+          </form>
+        </div>
+
+        <div id="signup-form">
+          <form class="signUp">
+            <label for="fname">Name</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email</label>
+            <input required type="email" id="email" name="email" placeholder="Enter 6 digit code" />
+
+            <label for="mobile">Mobile No.</label>
+            <input required type="number" pattern="^[6789]\d{9,9}$" title="Please enter valid phone number" id="mobile"
+              name="mobile" />
+
+            <label for="course">Course Interested</label>
+            <input required type="course" minlength="6" id="course" name="course" placeholder="Enter course name" />
+
+            <div class="signUp-passwordfields">
+              <div class="signUp-passwordfields-pass">
+                <label class="password-label" for="password">Password</label>
+                <input required class="password-input" minlength="6" type="password" id="password" name="password"
+                  placeholder="Enter 6 digit code" />
+              </div>
+              <div class="signUp-passwordfields-cpass">
+                <label class="password-label" for="cpassword">Confirm Password</label>
+                <input required class="password-label" minlength="6" type="password" id="cpassword" name="cpassword"
+                  placeholder="Enter 6 digit code" />
+              </div>
+            </div>
+
+            <button class="signUp-Register" type="submit" value="Register">Register</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- form for mobile and tablet -->
+    <div class="formContainer2">
+      <!-- toggle buttons -->
+      <div class='login_signUp_toggle'>
+        <button class="signUp_toggle" onclick="mobileSignUp()">Sign Up</button>
+        <button class="login_toggle" onclick="mobileLogin()">Login</button>
+      </div>
+
+      <div id="login-mobile-form">
+        <form class="login ">
+          <label for="email">Email</label>
+          <input required type="email" id="email" name="email" placeholder="Enter registered email" />
+
+          <label class="password-label" for="password">Password</label>
+          <input required class="password-input" minlength="6" type="password" id="password" name="password"
+            placeholder="Enter 6 digit code" />
+
+          <button class="login-submit" type="submit" value="Login">Login</button>
+        </form>
+      </div>
+      <div id="signup-mobile-form">
+        <form class="signUp" method="post" action="#">
+          <label for="fname">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input required type="email" id="email" name="email" placeholder="Enter 6 digit code" />
+
+          <label for="mobile">Mobile No.</label>
+          <input required pattern="^[6789]\d{9,9}$" title="Please enter valid phone number" type="number" id="mobile"
+            name="mobile" />
+
+          <label for="course">Course Interested</label>
+          <input required minlength="6" type="course" id="course" name="course" placeholder="Enter course name" />
+
+          <div class="signUp-passwordfields">
+            <div class="signUp-passwordfields-pass">
+              <label for="password">Password</label>
+              <input required minlength="6" type="password" id="password" name="password"
+                placeholder="Enter 6 digit code" />
+            </div>
+            <div class="signUp-passwordfields-cpass">
+              <label for="cpassword">Confirm Password</label>
+              <input required minlength="6" type="password" id="cpassword" name="cpassword"
+                placeholder="Enter 6 digit code" />
+            </div>
+          </div>
+
+          <button class="signUp-Register" type="submit" value="Register">Register</button>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- Placement section -->
+
+    <div class="placement">
+      <div class="placement__info">
+        <h3 class="placement__info-header">COMMENDABLE CAMPUS PLACEMENTS</h3>
+        <p class="placement__info-desc">
+          Placement is one among many other advantages at Sarala Birla
+          University. We are not only grooming professionals but developing
+          well motivated global leaders who will be intellectually competent
+          and morally upright. A well organized placement team streamlines the
+          placement process to realize the dream of students of leaving the
+          campus with a bright future.
+        </p>
+      </div>
+
+      <div class="placement__package">
+        <div class="placement__package-highest">
+          <img alt="image" src="./images/icons/slopeIcon.png" />
+          <div class="placement__package-highest-info">
+            <h4>₹9.5 LPA</h4>
+            <p>Highest Package</p>
+          </div>
+        </div>
+        <hr width="0.5" size="80" color="#CBCBCB" />
+        <div class="placement__package-average">
+          <img alt="image" src="./images/icons/constantIcon.png" />
+          <div class="placement__package-average-info">
+            <h4>₹3.7 LPA</h4>
+            <p>Average Package</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Courses -->
+
+    <div class="courses">
+      <div class="courses-header">
+        <img alt="image" src="./images/icons/onlineLearning.png" />
+        <h3>COURSES OFFERED</h3>
+      </div>
+      <div class="courses-panel">
+        <button class="collapsible">
+          +
+        </button>
+        <p>Faculty Of Engineering & Applied Sciences</p>
+        <div class="course-panel-details">
+          <a class="hide_mobile" target="_blank" href="https://www.google.com/">View Details &#8594;</a>
+          <a class="hide_desktop" target="_blank" href="https://www.google.com/">&#8594;</a>
+        </div>
+      </div>
+      <div class="coursesList ">
+        <div>PH.D</div>
+        <div>M. TECH.</div>
+        <div>B. TECH.</div>
+        <div>DIPLOMA ENGINEERING</div>
+        <div>IPLOMA ENGINEERING - LATERAL</div>
+        <div>MCA</div>
+        <div>M.SC. IN SOFTWARE DEVELOPMENT</div>
+        <div>B.SC. (HONS.) MATHEMATICS</div>
+        <div>BCA</div>
+        <div>B. TECH.-LATERAL</div>
+      </div>
+
+      <div class="courses-panel">
+        <button class="collapsible">
+          +
+        </button>
+        <p> Faculty Of Commerce & Manage</p>
+        <div class="course-panel-details">
+          <a class="hide_mobile" target="_blank" href="https://www.google.com/">View Details &#8594;</a>
+          <a class="hide_desktop" target="_blank" href="https://www.google.com/">&#8594;</a>
+        </div>
+      </div>
+
+      <div class="coursesList ">
+        <div>PH.D</div>
+        <div>M. TECH.</div>
+        <div>B. TECH.</div>
+        <div>DIPLOMA ENGINEERING</div>
+        <div>IPLOMA ENGINEERING - LATERAL</div>
+        <div>MCA</div>
+        <div>M.SC. IN SOFTWARE DEVELOPMENT</div>
+        <div>B.SC. (HONS.) MATHEMATICS</div>
+      </div>
+
+      <div class="courses-panel">
+        <button class="collapsible">
+          +
+        </button>
+        <p>Faculty Of Humanities & Linguistics</p>
+        <div class="course-panel-details">
+          <a class="hide_mobile" target="_blank" href="https://www.google.com/">View Details &#8594;</a>
+          <a class="hide_desktop" target="_blank" href="https://www.google.com/">&#8594;</a>
+        </div>
+      </div>
+
+      <div class="coursesList ">
+        <div>PH.D</div>
+        <div>M. TECH.</div>
+        <div>B. TECH.</div>
+        <div>DIPLOMA ENGINEERING</div>
+        <div>IPLOMA ENGINEERING - LATERAL</div>
+        <div>MCA</div>
+        <div>M.SC. IN SOFTWARE DEVELOPMENT</div>
+        <div>B.SC. (HONS.) MATHEMATICS</div>
+      </div>
+
+      <div class="courses-panel">
+        <button class="collapsible">
+          +
+        </button>
+        <p>Faculty Of Nursing, Clinical technology & Public Health</p>
+        <div class="course-panel-details">
+          <a class="hide_mobile" target="_blank" href="https://www.google.com/">View Details &#8594;</a>
+          <a class="hide_desktop" target="_blank" href="https://www.google.com/">&#8594;</a>
+        </div>
+      </div>
+
+      <div class="coursesList ">
+        <div>PH.D</div>
+        <div>M. TECH.</div>
+        <div>B. TECH.</div>
+        <div>DIPLOMA ENGINEERING</div>
+        <div>IPLOMA ENGINEERING - LATERAL</div>
+        <div>MCA</div>
+        <div>M.SC. IN SOFTWARE DEVELOPMENT</div>
+        <div>B.SC. (HONS.) MATHEMATICS</div>
+      </div>
+
+      <div class="courses-panel">
+        <button class="collapsible">
+          +
+        </button>
+        <p> Ph.D</p>
+        <div class="course-panel-details">
+          <a class="hide_mobile" target="_blank" href="https://www.google.com/">View Details &#8594;</a>
+          <a class="hide_desktop" target="_blank" href="https://www.google.com/">&#8594;</a>
+        </div>
+      </div>
+
+      <div class="coursesList ">
+        <div>PH.D</div>
+        <div>M. TECH.</div>
+        <div>B. TECH.</div>
+        <div>DIPLOMA ENGINEERING</div>
+        <div>IPLOMA ENGINEERING - LATERAL</div>
+        <div>MCA</div>
+        <div>M.SC. IN SOFTWARE DEVELOPMENT</div>
+        <div>B.SC. (HONS.) MATHEMATICS</div>
+        <div>BCA</div>
+        <div>B. TECH.-LATERAL</div>
+      </div>
+      <div class="courses-Fee">
+        <img alt="image" src="./images/icons/coins.png" />
+        <h4> Check out the Fee Structure of Programmes 2022-23</h4>
+        <a target="_blank" href="https://www.google.com/">
+          <button>View Fee Details &#8594;</button>
+        </a>
+      </div>
+    </div>
+
+    <!-- about section -->
+    <div class="about">
+      <div class="about__desc">
+        <h3 class="about__desc-header">GLOBAL EDUCATION CLOSER TO YOUR HOME</h3>
+        <h4 class="about__desc-tag">ABOUT THE UNIVERSITY</h4>
+        <p>
+          Sarala Birla University is a self-financed private unitary university. The Sarala Birla University Act. 2017
+          (Jharkhand
+          Act. 13, 2017) has been passed by the Legislative Assembly of Jharkhand in 2017. The Sarala Birla University
+          Act 2017
+          has been published in the Jharkhand Gazette on 4th July vide the Law Department Notification No. 504 dated 4th
+          July
+          2017. As per the Act 2017 the Management of the university is carried out by a Board of Governors headed by
+          Smt.
+          Jayashree Mohta, Honorable Chairperson, Bharat Arogya & Gyan Mandir and the first Chancellor of Sarala Birla
+          University.
+        </p>
+      </div>
+      <img alt="image" src="./images/views/uniView.png" />
+    </div>
+
+    <!-- apply section -->
+    <div class="apply">
+      <div class="apply-header">
+        HOW TO APPLY
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z" />
+        </svg>
+      </div>
+      <div class="apply-steps">
+        <div class="apply-item">
+          <img alt="image" src="./images/apply/newUser.png" />
+          <p class="apply-text">Create A New Account.</p>
+        </div>
+        <div class="apply-item">
+          <img alt="image" src="./images/apply/file.png" />
+          <p class="apply-text">Fill & Submit The Application Form</p>
+        </div>
+        <div class="apply-item">
+          <img alt="image" src="./images/apply/hand.png" />
+          <p class="apply-text">Pay The Application Fee</p>
+        </div>
+        <div class="apply-item">
+          <img alt="image" src="./images/apply/jobOffer.png" />
+          <p class="apply-text">Receive The Offer Letter From Sbu</p>
+        </div>
+        <div class="apply-item">
+          <img alt="image" src="./images/apply/acceptFile.png" />
+          <p class="apply-text">Accept The Offer Letter</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- sbu highlights section -->
+    <div class='highlights'>
+      <img alt="image" src="./images/views/highlights.png" />
+      <div class="highlights__list">
+        <h2 class="highlights__list-header">SBU Highlights</h2>
+        <ul class="highlights__list-items">
+          <li>Placement Assistance By : B.K. Birla & Aditya Birla Group of Companies</li>
+          <li>Pool of 192+ Companies for Internships and Placements</li>
+          <li>Multiple Industry tie-ups for Training, Live Projects and Internships</li>
+          <li>World Class Infrastructure - 60 Acre's WiFi enabled campus</li>
+          <li>Focus on experiential and on-job learning</li>
+          <li>Ultra Modern Labs</li>
+          <li>Highly qualified and experienced Professors</li>
+          <li>Merit Scholarships</li>
+          <li>Transport Facility</li>
+          <li>Hostel Facility</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="testimonials">
+      <h5 class="testimonials-header">TESTIMONIALS</h5>
+      <div class="testimonials__client">
+        <embed class="desktop-view" src="./images/icons/leftIcon.svg" />
+        <div class="testimonials__client-details">
+          <div class="testimonials__client-icon"> RJ</div>
+          <h4 class="testimonials__client-name">Riya Jaiswal</h4>
+          <span class="testimonials__client-study">B.Com. Accounts Honours, 1st Semester (Batch 2019-22)</span>
+          <p>Sarala Birla University is a self-financed private unitary university. The Sarala Birla University Act.
+            2017 (Jharkhand
+            Act. 13, 2017) has been passed by the Legislative Assembly of Jharkhand in 2017. The Sarala Birla
+            University
+            Act 2017
+            has been published in the Jharkhand Gazette.</p>
+        </div>
+        <embed class="desktop-view" src="./images/icons/rightArrow.svg" />
+      </div>
+      <div class="testimonials-bottom">
+        <div class="dots">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <div class="mobile-view-icons">
+          <embed src="./images/icons/leftIcon.svg" />
+          <embed src="./images/icons/rightArrow.svg" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Scholarship offered section -->
+    <div class="scholarship">
+      <div class="scholarship__header">
+        <h4 class="scholarship__header-clip">SCHOLARSHIPS OFFERED</h4>
+        <a target="_blank" href="https://www.google.com/">
+          <button class="scholarship__header-button">View All &#8594;</button>
+        </a>
+      </div>
+      <div class="scholarship__header-mobile">
+        <h4>SCHOLARSHIPS OFFERED</h4>
+      </div>
+      <div class="scholarship__criteria">
+        <div class="scholarship__criteria-details">
+          <h3 class="scholarship__criteria-details-percent">50%</h3>
+          <p>Merit scholarship</p>
+        </div>
+        <div class="scholarship__criteria-details">
+          <h3 class="scholarship__criteria-details-percent">15%</h3>
+          <p>Defence Personnel</p>
+        </div>
+        <div class="scholarship__criteria-details">
+          <h3 class="scholarship__criteria-details-percent">25%</h3>
+          <p>Family Members of SBU & SBPS Staff</p>
+        </div>
+        <div class="scholarship__criteria-details">
+          <h3 class="scholarship__criteria-details-percent">10%</h3>
+          <p>Freedom Fighters</p>
+        </div>
+        <div class="scholarship__criteria-details">
+          <h3 class="scholarship__criteria-details-percent">25%</h3>
+          <p>Differently Abled</p>
+        </div>
+        <div class="scholarship__criteria-details">
+          <h3 class="scholarship__criteria-details-percent">15%</h3>
+          <p>Kashmiri Migrants</p>
+        </div>
+      </div>
+      <div class="scholarship__header-mobile">
+        <a target="_blank" href="https://www.google.com/">
+          <button class="scholarship-mobile-button">View All &#8594;</button>
+        </a>
+      </div>
+    </div>
+
+
+    <!-- Recruiters Section -->
+    <div class="recruiters">
+      <h5>TOP RECRUITERS</h5>
+      <div class="recruiters-images">
+        <img alt="image" src="./images/icons/leftIcon.svg" />
+        <img alt="image" src="./images/logo/tcsLogo.png" />
+        <img alt="image" src="./images/logo/adityaBirla.jpg" />
+        <img alt="image" src="./images/logo/wiproLogo.jpg" />
+        <img alt="image" src="./images/logo/veVehicles.png" />
+        <img alt="image" src="./images/logo/eyLogo.png" />
+        <img alt="image" src="./images/icons/rightArrow.svg" />
+      </div>
+
+      <!-- <div class="recruiters-images--mobile">
+        <img alt="image" src="./images/logo/tcsLogo.png" />
+        <img alt="image" src="./images/logo/adityaBirla.jpg" />
+        <img alt="image" src="./images/logo/wiproLogo.jpg" />
+        <img alt="image" src="./images/logo/veVehicles.png" />
+      </div> -->
+
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+
+    <!--   Carousel section -->
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img alt="image" src="./images/views/sliderImage.png">
+      </div>
+      <div class=" mySlides fade">
+        <img alt="image" src="./images/Hero/heroImg.png">
+      </div>
+      <div class=" mySlides fade">
+        <img alt="image" src="./images/views/sliderImage.png">
+      </div>
+    </div>
+    <!-- The dots/circles -->
+    <div class=" carousel-dots">
+      <span class="carousel-dot"></span>
+      <span class="carousel-dot"></span>
+      <span class="carousel-dot"></span>
+    </div>
+
+
+    <!-- Collaboration section -->
+    <div class="collaborations">
+      <h3>COLLABORATIONS AND TIE-UPS</h3>
+      <div class="collaborations-images">
+        <img alt="image" src="./images/icons/leftIcon.svg" />
+        <img alt="image" src="./images/collabs/il.png" />
+        <img alt="image" src="./images/collabs/collab2.png" />
+        <img alt="image" src="./images/collabs/tcs.png" />
+
+        <img alt="image" src="./images/collabs/collab4.png" />
+        <img alt="image" src="./images/collabs/collab5.png" />
+
+        <img alt="image" src="./images/icons/rightArrow.svg" />
+      </div>
+
+      <div class="collaborations-images--Mobile">
+        <img alt="image" src="./images/collabs/il.png" />
+        <img alt="image" src="./images/collabs/collab2.png" />
+        <img alt="image" src="./images/collabs/tcs.png" />
+        <img alt="image" src="./images/collabs/collab4.png" />
+        <img alt="image" src="./images/collabs/collab5.png" />
+      </div>
+
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+    </div>
+
+    <!-- contact us section -->
+    <div class="contact">
+      <div class="contact-info">
+        <h5>Contact Us</h5>
+        <p class="contact-desti ">Birla Knowledge City, P.O.- Mahilong, Purulia Road, Ranchi- 835103
+        </p>
+
+        <div class="contact-details">
+          <p class="contact-info-common">admission@sburanchi.ac.in</p>
+          <div class="contact-details-contact">
+            <span class="contact-info-common">Toll Free - 18008906077</span>
+            <span class="contact-info-common">+91 7707004286/87</span>
+          </div>
+        </div>
+        <div class="contact-details">
+          <span class="contact-info-common">Monday - Saturday</span>
+          <span class="contact-info-common">09:00 hrs - 17:00 hrs</span>
+        </div>
+
+      </div>
+      <div class="contact-right">
+        <div class="contact-icons">
+          <a href="https://www.facebook.com/">
+            <img alt="image" src="./images/icons/fb.png" />
+          </a>
+          <a href="https://www.linkedin.com/">
+            <img alt="image" src="./images/icons/linkedin.png" />
+          </a>
+          <a href="https://www.twitter.com/">
+            <img alt="image" src="./images/icons/twitter.png" />
+          </a>
+          <a href="https://www.instagram.com/">
+            <img alt="image" src="./images/icons/insta.png" />
+          </a>
+          <a href="https://www.youtube.com/">
+            <img alt="image" src="./images/icons/youtube.png" />
+          </a>
+        </div>
+        <a href="https://sbu.ac.in/">Sarla Birla University</a>
+      </div>
+    </div>
+
+    <!-- Scroll to top component  -->
+    <a href="#">
+      <span class="scrollup-icon">
+        ^
+      </span>
+    </a>
+
+    <!-- copyright section -->
+    <div class="copyright">
+      <!-- <span class="scrollup-icon">^</span> -->
+      <p>© Copyright 2022 - All Rights Reserved sbu.ac.in</p>
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
